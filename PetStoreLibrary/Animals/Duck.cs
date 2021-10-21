@@ -8,7 +8,7 @@ namespace PetStoreLibrary
 {
     class Duck : Animal
     {
-        public Duck(bool isMale, bool isParent, string sound) : base(15)
+        public Duck(bool isMale, bool isParent, string sound) : base(15, "Duck")
         {
             this.isMale = isMale;
             this.isParent = isParent;

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace PetStoreLibrary
 {
-    class Wolf : Animal
+          public class Wolf : Animal
     {
         public string WolfName { get; set; }
 
-        public Wolf(string type, string color, bool isAlfa) :base(5000)
+        public Wolf(string type, string color, bool isAlfa) :base(5000, "Wolf")
         {
             Type = type;
             Color = color;

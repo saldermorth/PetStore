@@ -64,7 +64,8 @@ namespace PetShopUI
             // PetStoreForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;           
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::PetStoreUI.Properties.Resources.animalVoting;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1033, 645);
             this.Controls.Add(this.searchButton);
@@ -72,6 +73,7 @@ namespace PetShopUI
             this.Controls.Add(this.searchBarTextBox);
             this.Name = "PetStoreForm";
             this.Text = "PetStore";
+            this.Load += new System.EventHandler(this.PetStoreForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

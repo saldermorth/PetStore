@@ -5,22 +5,34 @@ using System.Text;
 
 namespace PetStoreLibrary
 {
-    public abstract class Animal
+    public class Animal
     {
        
         public string ArtikelNummer  { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
 
-        public Animal( decimal _price)
+        public Animal(decimal _price, string _name)
         {
             ArtikelNummer = GetArtikelNummer();
-            Name = GetName();
+            GetName();
             Price = _price;
+            
         }
-        private string GetName()
+        private void GetName()
         {
-            return "Bob" + DateTime.Now.Millisecond.ToString();
+            if (this.GetType() == typeof(Wolf))
+            {
+                this.Name += DateTime.Now.Millisecond.ToString();
+            }
+            else if (this.GetType() == typeof(Duck))
+            {
+                this.Name += DateTime.Now.Millisecond.ToString();
+            }
+            else if (this.GetType() == typeof(Elephant))
+            {
+                this.Name += DateTime.Now.Millisecond.ToString();
+            }
         }
         private string GetArtikelNummer()
         {

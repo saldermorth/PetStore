@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PetStoreLibrary;
 using PetStoreLibrary.Animals;
 
 namespace PetShopUI
@@ -16,6 +17,8 @@ namespace PetShopUI
         public PetStoreForm()
         {
             InitializeComponent();
+
+            Animal two = new Wolf("Timber", "Grey", true);
             //foreach (var item in AnimalShop.Inventory)
             //{
             //    searchResultListBox.Items.Add(item.Name);          
@@ -23,7 +26,7 @@ namespace PetShopUI
             //}
             for (int i = 0; i < 15; i++)
             {
-                searchResultListBox.Items.Add(i + "Name");
+                searchResultListBox.Items.Add(two.Name);
             }
             
         }
@@ -49,6 +52,11 @@ namespace PetShopUI
         private void textBox1_MouseDown(object sender, MouseEventArgs e)
         {
             searchBarTextBox.Clear();
+        }
+
+        private void PetStoreForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
