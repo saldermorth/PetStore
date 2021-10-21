@@ -12,12 +12,23 @@ namespace PetStoreLibrary.Animals
         public List<Animal> Sold { get; set; }
         public int Profits { get; set; }
 
-        public void Meny()
-        {
-
+        public void Meny() { 
         }
         public Animal SellAnimal(string animalType)
         {
+            if (animalType == null || animalType == "")
+            {
+                foreach (var item in Inventory)
+                {
+                    if (animalType == item.Name)
+                    {
+
+                    }
+                }
+            }
+            
+
+            
             Animal temp = new Animal();
             return temp;
         }

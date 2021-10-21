@@ -8,7 +8,9 @@ namespace PetStoreLibrary
 {
     class Duck : Animal
     {
-        public string Type { get; set; }
-        
+        public bool isMale { get; set; }
+        public bool isParent { get; set; }
+        public string Sound { get; set; }
+
     }
 }

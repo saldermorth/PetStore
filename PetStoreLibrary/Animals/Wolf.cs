@@ -9,7 +9,7 @@ namespace PetStoreLibrary
     class Wolf : Animal
     {
         public string Type { get; set; }
-        public string Name { get; set; }
+        public string Color { get; set; }
         public bool isAlfa { get; set; }
     }
 }

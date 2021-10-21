@@ -8,7 +8,7 @@ namespace PetStoreLibrary
     public class Animal
     {
         public string ArtikelNummer  { get; set; }
-        public double Weight { get; set; }
+        public string Name { get; set; }
         public decimal Price { get; set; }
     }
 }
