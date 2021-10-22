@@ -9,8 +9,7 @@ namespace PetStoreLibrary
 {
           public class Wolf : Animal
     {
-        public string WolfName { get; set; }
-
+        
         public Wolf(string type, string color, bool isAlfa) :base(5000, "Wolf")
         {
             Type = type;

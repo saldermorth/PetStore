@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace PetStoreLibrary
 {
@@ -19,10 +20,16 @@ namespace PetStoreLibrary
             Price = _price;
             
         }
+        private void GetPrice()
+        {
+            
+        }
         private void GetName()
         {
+            Thread.Sleep(1);
             if (this.GetType() == typeof(Wolf))
             {
+                
                 this.Name += DateTime.Now.Millisecond.ToString();
             }
             else if (this.GetType() == typeof(Duck))

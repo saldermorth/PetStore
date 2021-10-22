@@ -9,7 +9,10 @@ namespace PetStoreLibrary
 {
     class Farm
     {
-
+        /// <summary>
+        /// Creates all Animal objects
+        /// </summary>
+        /// <param name="inventory"></param>
         public void BreedAnimals(List<Animal> inventory)
         {
             
@@ -26,7 +29,7 @@ namespace PetStoreLibrary
                     Duck temp = new Duck(true, false, "Quack");
                     inventory.Add(temp);
                 }
-                else
+                else// TOdo - never enters here
                 {
                     Elephant temp = new Elephant(true, 4000, "Africa");
                     inventory.Add(temp);

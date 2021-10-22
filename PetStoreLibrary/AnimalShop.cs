@@ -9,12 +9,13 @@ namespace PetStoreLibrary.Animals
 {
     public class AnimalShop
     {
-        public static List<Animal> Inventory { get; set; }
-        public static List<Animal> Sold { get; set; }
-        private static decimal Profits { get; set; }
+        public static List<Animal> Inventory = new List<Animal>();
+        public static List<Animal> Sold = new List<Animal>();
+        public static decimal Profits { get; set; }
 
-        public void Meny()
+        public static void Meny()
         {
+            
             Farm oldMcdonalds = new Farm();
             oldMcdonalds.BreedAnimals(Inventory);
         }
