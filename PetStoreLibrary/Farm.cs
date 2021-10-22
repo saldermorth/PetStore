@@ -19,12 +19,12 @@ namespace PetStoreLibrary
             for (int i = 0; i <45; i++)
             {
 
-                if (i % 2 == 0)
+                if (i < 13)
                 {
                     Wolf temp = new Wolf("Timber", "Grey", false);
                     inventory.Add(temp);
                 }
-                else if (i % 1 == 0)
+                else if (i > 13 && i < 33)
                 {
                     Duck temp = new Duck(true, false, "Quack");
                     inventory.Add(temp);

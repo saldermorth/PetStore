@@ -32,6 +32,7 @@ namespace PetShopUI
             this.searchBarTextBox = new System.Windows.Forms.TextBox();
             this.searchResultListBox = new System.Windows.Forms.ListBox();
             this.searchButton = new System.Windows.Forms.Button();
+            this.buyButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // searchBarTextBox
@@ -60,6 +61,16 @@ namespace PetShopUI
             this.searchButton.TabIndex = 2;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // buyButton
+            // 
+            this.buyButton.Location = new System.Drawing.Point(23, 497);
+            this.buyButton.Name = "buyButton";
+            this.buyButton.Size = new System.Drawing.Size(308, 94);
+            this.buyButton.TabIndex = 3;
+            this.buyButton.Text = "Buy";
+            this.buyButton.UseVisualStyleBackColor = true;
             // 
             // PetStoreForm
             // 
@@ -68,6 +79,7 @@ namespace PetShopUI
             this.BackgroundImage = global::PetStoreUI.Properties.Resources.animalVoting;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1033, 645);
+            this.Controls.Add(this.buyButton);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.searchResultListBox);
             this.Controls.Add(this.searchBarTextBox);
@@ -84,6 +96,7 @@ namespace PetShopUI
         private System.Windows.Forms.TextBox searchBarTextBox;
         private System.Windows.Forms.ListBox searchResultListBox;
         private System.Windows.Forms.Button searchButton;
+        private System.Windows.Forms.Button buyButton;
     }
 }
 

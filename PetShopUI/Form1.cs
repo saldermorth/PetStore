@@ -18,16 +18,11 @@ namespace PetShopUI
         {
             InitializeComponent();
 
-            Animal two = new Wolf("Timber", "Grey", true);
-            //foreach (var item in AnimalShop.Inventory)
+            //foreach (Animal pet in AnimalShop.Inventory)
             //{
-            //    searchResultListBox.Items.Add(item.Name);          
-
+            //    searchResultListBox.Items.Add(pet.Name);
             //}
-            for (int i = 0; i < 15; i++)
-            {
-                searchResultListBox.Items.Add(two.Name);
-            }
+            
             
         }
 
@@ -57,6 +52,19 @@ namespace PetShopUI
         private void PetStoreForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void searchButton_Click(object sender, EventArgs e)
+        {
+            List<Animal> searchResults = new List<Animal>();
+            searchResults.Clear();
+            searchResults = AnimalShop.ListSender(searchBarTextBox.Text);
+            searchBarTextBox.Clear();
+            searchResultListBox.Items.Clear();
+            foreach (Animal item in searchResults)
+            {
+                searchResultListBox.Items.Add(item.Name);
+            }
         }
     }
 }

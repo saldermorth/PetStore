@@ -15,29 +15,46 @@ namespace PetStoreLibrary.Animals
 
         public static void Meny()
         {
-            
             Farm oldMcdonalds = new Farm();
             oldMcdonalds.BreedAnimals(Inventory);
+
         }
-        public Animal SellAnimal(string animalType)
+        public static List<Animal> SearchResult(string userSearch)
         {
-            if (animalType == null || animalType == "")
+            userSearch = userSearch.ToLower();
+            List<Animal> searchResults = new List<Animal>();
+            if (userSearch == "" || userSearch == null)
             {
-                foreach (var item in Inventory)
-                {
-                    if (animalType == item.Name)
-                    {
-                        Profits = Profits + item.Price;
-                        Sold.Add(item);
-                        Console.WriteLine("You just bought a {0}", item.Name);
-                        Inventory.Remove(item);
-
-                    }
-                }
+                //Add null statment
+                return searchResults;
             }
+            foreach (Animal item in Inventory)//Todo - Switch here?
+            {
+                if (userSearch == "wolf" && item.GetType() == typeof(Wolf))
+                {
+                    searchResults.Add(item);
+                }
+                else if (userSearch == "duck" && item.GetType() == typeof(Duck))
+                {
+                    searchResults.Add(item);
+                }
+                else if (userSearch == "elephant" && item.GetType() == typeof(Elephant))
+                {
+                    searchResults.Add(item);
+                }
 
-
-            return Inventory[1];
+            }
+                       
+            return searchResults;
         }
+        public static List<Animal> ListSender(string search)
+        {
+            List<Animal> searchResults = SearchResult(search);
+
+            return searchResults;
+
+
+        }
+        
     }
 }

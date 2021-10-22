@@ -19,8 +19,6 @@ namespace PetShopUI
         {
             AnimalShop.Meny();
 
-
-
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

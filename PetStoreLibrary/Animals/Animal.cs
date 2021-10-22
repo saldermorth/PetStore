@@ -19,26 +19,21 @@ namespace PetStoreLibrary
             GetName();
             Price = _price;
             
-        }
-        private void GetPrice()
-        {
-            
-        }
+        }          
         private void GetName()
         {
             Thread.Sleep(1);
             if (this.GetType() == typeof(Wolf))
-            {
-                
-                this.Name += DateTime.Now.Millisecond.ToString();
+            {                
+                this.Name += "Wolf" + DateTime.Now.Millisecond.ToString();
             }
             else if (this.GetType() == typeof(Duck))
             {
-                this.Name += DateTime.Now.Millisecond.ToString();
+                this.Name += "Duck" + DateTime.Now.Millisecond.ToString();
             }
             else if (this.GetType() == typeof(Elephant))
             {
-                this.Name += DateTime.Now.Millisecond.ToString();
+                this.Name += "Elephant" + DateTime.Now.Millisecond.ToString();
             }
         }
         private string GetArtikelNummer()
