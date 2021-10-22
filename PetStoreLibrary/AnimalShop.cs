@@ -15,7 +15,8 @@ namespace PetStoreLibrary.Animals
 
         public void Meny()
         {
-
+            Farm oldMcdonalds = new Farm();
+            oldMcdonalds.BreedAnimals(Inventory);
         }
         public Animal SellAnimal(string animalType)
         {

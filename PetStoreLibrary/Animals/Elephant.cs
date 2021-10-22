@@ -8,7 +8,7 @@ namespace PetStoreLibrary
 {
     class Elephant : Animal
     {
-        public Elephant(bool hasTusks, int trunkLegth, string origin, string _artikelNummer) : base(78000, "Elephant")
+        public Elephant(bool hasTusks, int trunkLegth, string origin) : base(78000, "Elephant")
         {
             HasTusks = hasTusks;
             TrunkLegth = trunkLegth;

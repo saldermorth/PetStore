@@ -10,24 +10,28 @@ namespace PetStoreLibrary
     class Farm
     {
 
-        public void BreedAnimals()
+        public void BreedAnimals(List<Animal> inventory)
         {
-
+            
             for (int i = 0; i <45; i++)
             {
-                
-                if (i%2 == 0)
+
+                if (i % 2 == 0)
                 {
-                    //string W = "wolf";
-                    //W = W + i;
-                    // = new Wolf("Timber", "Grey", false);
+                    Wolf temp = new Wolf("Timber", "Grey", false);
+                    inventory.Add(temp);
                 }
-                
+                else if (i % 1 == 0)
+                {
+                    Duck temp = new Duck(true, false, "Quack");
+                    inventory.Add(temp);
+                }
+                else
+                {
+                    Elephant temp = new Elephant(true, 4000, "Africa");
+                    inventory.Add(temp);
+                }                   
             }
-            
-
-            //AnimalShop.Inventory.Add;
-
         }
     }
 }

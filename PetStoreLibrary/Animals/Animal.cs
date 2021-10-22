@@ -38,7 +38,7 @@ namespace PetStoreLibrary
         {
             Guid NewGuid = Guid.NewGuid();
 
-            return  NewGuid.ToString();
+            return NewGuid.ToString();
         }
 
     }
