@@ -6,19 +6,22 @@ using System.Threading;
 
 namespace PetStoreLibrary
 {
-    public class Animal
+    //Base Class
+    public class Animal 
     {       
         private string ArtikelNummer  { get; set; }
         private string Name { get; set; }
-        private decimal Price { get; set; }
-        //Todo write accesses here and make fields private
+        private decimal Price { get; set; }        
         public Animal(decimal _price, string _name)
         {
             ArtikelNummer = GetArtikelNummer();
             GiveName();
-            Price = _price;
-            
+            Price = _price;            
         }          
+
+        /// <summary>
+        /// Generates a unique name for animal objects.
+        /// </summary>
         private void GiveName()
         {
             Thread.Sleep(1);

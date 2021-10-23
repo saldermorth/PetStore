@@ -7,29 +7,32 @@ using PetStoreLibrary.Animals;
 
 namespace PetStoreLibrary.Animals
 {
+    /*
+        1. When should you use private instead of public?
+        The access modifier "Private" is prefareble when you want do keep the data safe. Its called incapsulation.
+        It is also keeps the number of methods that is acesseble. With makes it easyer to overview the code.
+        Less chance for confusions. If the field dose not to be used outside the scope its in then private is preferable.
+
+        2. When is it useful to have multiple constructor functions?
+       When you have child objects or object might have different number of parameters.
+
+        */
     public class AnimalShop
-    {
-
-        /*
-         1. When should you use private instead of public?
-         The access modifier "Private" is prefareble when you want do keep the data safe. Its called incapsulation.
-         It is also keeps the number of methods that is acesseble. With makes it easyer to overview the code.
-         Less chance for confusions. If the field dose not to be used outside the scope its in then private is preferable.
-
-         2. When is it useful to have multiple constructor functions?
-        When you have child objects or object might have different number of parameters.
-
-         */
+    {       
         private static List<Animal> Inventory = new List<Animal>();
         private static List<Animal> SoldItems = new List<Animal>();
         private static decimal Profits { get; set; }
 
         public void Meny()
         {
-            Farm oldMcdonalds = new Farm();
+            Farm oldMcdonalds = new Farm();           
             oldMcdonalds.BreedAnimals(Inventory);
-
         }
+        /// <summary>
+        /// Returns list to of requested animal-object-type.
+        /// </summary>
+        /// <param name="userSearch"></param>
+        /// <returns></returns>
         public static List<Animal> SearchResult(string userSearch)
         {
             userSearch = userSearch.ToLower();
@@ -39,7 +42,7 @@ namespace PetStoreLibrary.Animals
                 //Add null statment
                 return searchResults;
             }
-            foreach (Animal item in Inventory)//Todo - Switch here?
+            foreach (Animal item in Inventory)
             {
                 if (userSearch == "wolf" && item.GetType() == typeof(Wolf))
                 {
@@ -53,19 +56,11 @@ namespace PetStoreLibrary.Animals
                 {
                     searchResults.Add(item);
                 }
-            }
-                       
+            }                       
             return searchResults;
-        }
-        public static List<Animal> ListSender(string search)
-        {
-            List<Animal> searchResults = SearchResult(search);
-
-            return searchResults;
-        }
-        public string SellAnimal(string activeSearchResult)//Todo - rerturn string
-        {
-            //ToDo - print once?
+        }        
+        public string SellAnimal(string activeSearchResult)
+       {           
             if (activeSearchResult == "duck")
             {
                 foreach (Duck item in Inventory.OfType<Duck>())
@@ -103,9 +98,8 @@ namespace PetStoreLibrary.Animals
             }
             if (activeSearchResult == "elephant")
             {                                
-                foreach (Elephant item in Inventory.OfType<Elephant>())//Todo need both?
-                {                    
-                    if (item.GetName().Contains("Elephant") && item.GetType() == typeof(Elephant))//Todo need both?
+                foreach (Elephant item in Inventory.OfType<Elephant>())
+                    if (item.GetName().Contains("Elephant") && item.GetType() == typeof(Elephant))
                     {                        
                         SoldItems.Add(item);
                         Inventory.Remove(item);
@@ -116,9 +110,9 @@ namespace PetStoreLibrary.Animals
                             $"Artikelnummer :{item.Artikelnummer()}\n"                           
                             + item.GetInfo();                          
                     }
-                }
+                
             }            
-            return "null";
+            return "Inget djur valt";
         }
         
     }

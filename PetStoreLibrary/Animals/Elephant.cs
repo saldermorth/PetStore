@@ -18,6 +18,10 @@ namespace PetStoreLibrary
             TrunkLegth = trunkLegth;
             Origin = origin;
         }
+        /// <summary>
+        /// Unique data for Elephant type of object.
+        /// </summary>
+        /// <returns></returns>
         public string GetInfo()
         {
             return $"Har betar : {this.HasTusks.ToString()}\n" +

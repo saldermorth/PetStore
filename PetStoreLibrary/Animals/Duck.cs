@@ -18,6 +18,10 @@ namespace PetStoreLibrary
             this.isParent = isParent;
             Sound = sound;
         }
+        /// <summary>
+        /// Unique data for Duck type of object.
+        /// </summary>
+        /// <returns></returns>
         public string GetInfo()
         {
             return $"Är hane : {this.isMale}\n" +

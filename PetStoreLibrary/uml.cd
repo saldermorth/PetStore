@@ -1,4 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="UI">
+    <Position X="2.687" Y="1.729" Height="0.406" Width="0.7" />
+  </Comment>
+  <Class Name="PetStoreLibrary.Animal">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAIEAAAAAQAAACAIAACAAAAAAAABAA=</HashCode>
+      <FileName>Animals\Animal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetStoreLibrary.Duck">
+    <Position X="8.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAABIAAAAAACAA=</HashCode>
+      <FileName>Animals\Duck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetStoreLibrary.Elephant">
+    <Position X="10.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAgAABA=</HashCode>
+      <FileName>Animals\Elephant.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetStoreLibrary.Wolf">
+    <Position X="6" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAEAAAQAAgAAAAAA=</HashCode>
+      <FileName>Animals\Wolf.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetStoreLibrary.Animals.AnimalShop">
+    <Position X="12.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAgEAgIAAgAgAAAAA=</HashCode>
+      <FileName>AnimalShop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PetStoreLibrary.Farm">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAQAAAACAAAAAAQAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Farm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -19,6 +19,10 @@ namespace PetStoreLibrary
             Color = color;
             this.isAlfa = isAlfa;
         }
+        /// <summary>
+        /// Unique data for Wolf type of object.
+        /// </summary>
+        /// <returns></returns>
         public string GetInfo()
         {
             return $"Har färgen : {this.Color}\n" +

@@ -33,6 +33,6 @@ namespace PetStoreLibrary
                     inventory.Add(temp);
                 }                   
             }
-        }
+        }       
     }
 }
