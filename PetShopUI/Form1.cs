@@ -14,6 +14,8 @@ namespace PetShopUI
 {
     public partial class PetStoreForm : Form
     {
+        public int Profits { get; private set; }
+
         public PetStoreForm()
         {
             InitializeComponent();
@@ -58,13 +60,34 @@ namespace PetShopUI
         {
             List<Animal> searchResults = new List<Animal>();
             searchResults.Clear();
-            searchResults = AnimalShop.ListSender(searchBarTextBox.Text);
-            searchBarTextBox.Clear();
+            searchResults = AnimalShop.ListSender(searchBarTextBox.Text);            
             searchResultListBox.Items.Clear();
             foreach (Animal item in searchResults)
             {
                 searchResultListBox.Items.Add(item.Name);
             }
+        }
+
+        private void buyButton_Click(object sender, EventArgs e)
+        {
+            string activeSearchResult = searchBarTextBox.Text.ToLower();
+            if (activeSearchResult == "duck")
+            {
+                //Profits = Profits + item.Price;
+                //Sold update profits
+                //Remove item from list
+            }
+            if (activeSearchResult == "wolf")
+            {
+                //Sold update profits
+                //Remove item from list
+            }
+            if (activeSearchResult == "elephant")
+            {
+                //Sold update profits
+                //Remove item from list
+            }
+            searchBarTextBox.Clear();
         }
     }
 }
