@@ -18,7 +18,7 @@ Focus on the following headings: Methods, Constructors, Properties.
 Also read https://en.wikibooks.org/wiki/C_Sharp_Programming/Objects
 And read https://en.wikibooks.org/wiki/C_Sharp_Programming/Encapsulation - the chapters private, protected and public.
 
-Answer the following questions as a comment in your code.
+Answer the following questions as a comment in your code.//Done
 1. When should you use private instead of public?
 2. When is it useful to have multiple constructor functions?
 
@@ -32,7 +32,7 @@ Features:
 
 - Each animal class should have at least three properties.//Done
 
-- Also create a class Animal that contains whatever properties all animals have in common. For example, each animal needs a price. //Done 
+- Also create a class Animal that contains whatever properties all animals have in common. For example, each animal needs a price.//Done 
 
 - Make sure that each specific animal class inherits from Animal.//Done
 
@@ -42,7 +42,7 @@ If there is no such animal, for example if the user asks for a "crocodile" but y
 
 - When an animal is sold, the AnimalShop object should gain money.//Done
 
-- Store the money in a property./Done
+- Store the money in a property.//Done
 
 - Finally write a program that tests your classes (Menu).//Done
 
@@ -54,4 +54,4 @@ Betygskriterier:
 
 För G:
 
-Alla ovanstående features ska vara implementerade.
+Alla ovanstående features ska vara implementerade.//Done

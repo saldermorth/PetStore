@@ -9,6 +9,17 @@ namespace PetStoreLibrary.Animals
 {
     public class AnimalShop
     {
+
+        /*
+         1. When should you use private instead of public?
+         The access modifier "Private" is prefareble when you want do keep the data safe. Its called incapsulation.
+         It is also keeps the number of methods that is acesseble. With makes it easyer to overview the code.
+         Less chance for confusions. If the field dose not to be used outside the scope its in then private is preferable.
+
+         2. When is it useful to have multiple constructor functions?
+        When you have child objects or object might have different number of parameters.
+
+         */
         private static List<Animal> Inventory = new List<Animal>();
         private static List<Animal> SoldItems = new List<Animal>();
         private static decimal Profits { get; set; }
@@ -92,9 +103,9 @@ namespace PetStoreLibrary.Animals
             }
             if (activeSearchResult == "elephant")
             {                                
-                foreach (Elephant item in Inventory.OfType<Elephant>())
+                foreach (Elephant item in Inventory.OfType<Elephant>())//Todo need both?
                 {                    
-                    if (item.GetName().Contains("Elephant") && item.GetType() == typeof(Elephant))
+                    if (item.GetName().Contains("Elephant") && item.GetType() == typeof(Elephant))//Todo need both?
                     {                        
                         SoldItems.Add(item);
                         Inventory.Remove(item);
