@@ -56,27 +56,41 @@ namespace PetStoreLibrary.Animals
         {
             if (activeSearchResult == "duck")
             {
-                foreach (Animal item in Inventory)
+                foreach (Duck item in Inventory.OfType<Duck>())
                 {
                     if (item.Name.Contains("Duck"))
                     {
                         SoldItems.Add(item);
                         Inventory.Remove(item);
                         Profits += item.Price;
-                        return $"{item.Name} Sold. Cost : {item.Price}. \nTotal profits : {Profits}";                        
+                        return $"{item.Name} Såld. \n" +
+                           $"Pris : {item.Price}.  \n" +
+                           $"Bruttovinst : {Profits}\n" +
+                           $"Artikelnummer :{item.ArtikelNummer}\n" +
+                           $"Är hane : {item.isMale}\n" +
+                           $"Är förälder : {item.isParent}\n" +
+                           $"Säger  : {item.Sound}"
+                           ;
                     }
                 }
             }
             if (activeSearchResult == "wolf")
             {
-                foreach (Animal item in Inventory)
+                foreach (Wolf item in Inventory.OfType<Wolf>())
                 {
                     if (item.Name.Contains("Wolf"))
                     {
                         SoldItems.Add(item);
                         Inventory.Remove(item);
                         Profits += item.Price;
-                        return $"{item.Name} Sold. Cost : {item.Price}. \nTotal profits : {Profits}";
+                        return $"{item.Name} Såld. \n" +
+                           $"Pris : {item.Price}.  \n" +
+                           $"Bruttovinst : {Profits}\n" +
+                           $"Artikelnummer :{item.ArtikelNummer}\n" +
+                           $"Har färgen : {item.Color}\n" +
+                           $"Är Alfa : {item.isAlfa}\n" +
+                           $"Typ av varg :  {item.Type}"
+                           ;
                     }
                 }
 
