@@ -20,5 +20,11 @@ namespace PetStoreLibrary
         public string Type { get; set; }
         public string Color { get; set; }
         public bool isAlfa { get; set; }
+        public string GetInfo()
+        {
+            return $"Har färgen : {this.Color}\n" +
+                   $"Är Alfa : {this.isAlfa}\n" +
+                   $"Typ av varg :  {this.Type}";
+        }
     }
 }

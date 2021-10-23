@@ -22,7 +22,7 @@ Answer the following questions as a comment in your code.
 1. When should you use private instead of public?
 2. When is it useful to have multiple constructor functions?
 
-Your exercise for this week is to build a simple program with a class hierarchy. Imagine a pet shop, that sells different kinds of animals.
+Your exercise for this week is to build a simple program with a class hierarchy. Imagine a pet shop, that sells different kinds of animals.//Done
 
 Create a class named AnimalShop that represents the pet shop.//Done
 
@@ -48,7 +48,7 @@ If there is no such animal, for example if the user asks for a "crocodile" but y
 
   - It should create an object of the class AnimalShop.//Done
 
-  - Then buy some animals and print the values of all their properties.
+  - Then buy some animals and print the values of all their properties.//Done
 
 Betygskriterier:
 

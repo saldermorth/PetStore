@@ -18,5 +18,14 @@ namespace PetStoreLibrary
         public bool HasTusks { get; set; }
         public int TrunkLegth { get; set; }
         public string Origin { get; set; }
+
+        public string GetInfo()
+        {
+            return $"Har betar : {this.HasTusks.ToString()}\n" +
+                   $"Ursprung : {this.Origin}\n" +
+                   $"Snabellängd : {this.TrunkLegth}mm"
+                   ;
+          
+        }
     }
 }

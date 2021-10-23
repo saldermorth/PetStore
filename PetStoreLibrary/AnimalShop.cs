@@ -54,23 +54,21 @@ namespace PetStoreLibrary.Animals
         }
         public string SellAnimal(string activeSearchResult)//Todo - rerturn string
         {
+            //ToDo - print once?
             if (activeSearchResult == "duck")
             {
                 foreach (Duck item in Inventory.OfType<Duck>())
                 {
-                    if (item.Name.Contains("Duck"))
+                    if (item.GetName().Contains("Duck"))
                     {
                         SoldItems.Add(item);
                         Inventory.Remove(item);
-                        Profits += item.Price;
-                        return $"{item.Name} Såld. \n" +
-                           $"Pris : {item.Price}.  \n" +
+                        Profits += item.GetPrice();
+                        return $"{item.GetName()} Såld. \n" +
+                           $"Pris : {item.GetPrice()}.  \n" +
                            $"Bruttovinst : {Profits}\n" +
-                           $"Artikelnummer :{item.ArtikelNummer}\n" +
-                           $"Är hane : {item.isMale}\n" +
-                           $"Är förälder : {item.isParent}\n" +
-                           $"Säger  : {item.Sound}"
-                           ;
+                           $"Artikelnummer :{item.Artikelnummer()}\n" +
+                           item.GetInfo();                           
                     }
                 }
             }
@@ -78,45 +76,37 @@ namespace PetStoreLibrary.Animals
             {
                 foreach (Wolf item in Inventory.OfType<Wolf>())
                 {
-                    if (item.Name.Contains("Wolf"))
+                    if (item.GetName().Contains("Wolf"))
                     {
                         SoldItems.Add(item);
                         Inventory.Remove(item);
-                        Profits += item.Price;
-                        return $"{item.Name} Såld. \n" +
-                           $"Pris : {item.Price}.  \n" +
+                        Profits += item.GetPrice();
+                        return $"{item.GetName()} Såld. \n" +
+                           $"Pris : {item.GetPrice()}.  \n" +
                            $"Bruttovinst : {Profits}\n" +
-                           $"Artikelnummer :{item.ArtikelNummer}\n" +
-                           $"Har färgen : {item.Color}\n" +
-                           $"Är Alfa : {item.isAlfa}\n" +
-                           $"Typ av varg :  {item.Type}"
-                           ;
+                           $"Artikelnummer :{item.Artikelnummer()}\n" +
+                           item.GetInfo();
                     }
                 }
 
             }
             if (activeSearchResult == "elephant")
-            {
-                                
+            {                                
                 foreach (Elephant item in Inventory.OfType<Elephant>())
-                {
-                    if (item.Name.Contains("Elephant") && item.GetType() == typeof(Elephant))
+                {                    
+                    if (item.GetName().Contains("Elephant") && item.GetType() == typeof(Elephant))
                     {                        
                         SoldItems.Add(item);
                         Inventory.Remove(item);
-                        Profits += item.Price;
-                        return $"{item.Name} Såld. \n" +
-                            $"Pris : {item.Price}.  \n"+
+                        Profits += item.GetPrice();
+                        return $"{item.GetName()} Såld. \n" +
+                            $"Pris : {item.GetPrice()}.  \n" +
                             $"Bruttovinst : {Profits}\n" +
-                            $"Artikelnummer :{item.ArtikelNummer}\n" +
-                            $"Har betar : {item.HasTusks.ToString()}\n" +
-                            $"Ursprung : {item.Origin}\n" +
-                            $"Snabellängd : {item.TrunkLegth}mm"
-                            ;
+                            $"Artikelnummer :{item.Artikelnummer()}\n"                           
+                            + item.GetInfo();                          
                     }
                 }
-            }
-            //ToDo- if nothing bought return string
+            }            
             return "null";
         }
         
