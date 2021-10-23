@@ -17,7 +17,9 @@ namespace PetShopUI
         [STAThread]
         static void Main()
         {
-            AnimalShop.Meny();
+            AnimalShop petShopBoys = new AnimalShop();
+
+            petShopBoys.Meny();//-
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();

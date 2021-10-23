@@ -38,7 +38,7 @@ namespace PetShopUI
             //        if (animalType == item.Name)
             //        {
             //            Profits = Profits + item.Price;
-            //            Sold.Add(item);
+            //            SoldItems.Add(item);
             //            Console.WriteLine("You just bought a {0}", item.Name);
             //            Inventory.Remove(item);
 
@@ -58,35 +58,27 @@ namespace PetShopUI
 
         private void searchButton_Click(object sender, EventArgs e)
         {
+            
             List<Animal> searchResults = new List<Animal>();
             searchResults.Clear();
-            searchResults = AnimalShop.ListSender(searchBarTextBox.Text);            
-            searchResultListBox.Items.Clear();
-            foreach (Animal item in searchResults)
+            searchResults = AnimalShop.ListSender(searchBarTextBox.Text);
+            if (searchResults != null)
             {
-                searchResultListBox.Items.Add(item.Name);
+                searchResultListBox.Items.Clear();
+                foreach (Animal item in searchResults)
+                {
+                    searchResultListBox.Items.Add(item.Name);
+                }
             }
+            searchResultListBox.Items.Add("Null");
         }
 
         private void buyButton_Click(object sender, EventArgs e)
         {
+            AnimalShop shop = new AnimalShop();
             string activeSearchResult = searchBarTextBox.Text.ToLower();
-            if (activeSearchResult == "duck")
-            {
-                //Profits = Profits + item.Price;
-                //Sold update profits
-                //Remove item from list
-            }
-            if (activeSearchResult == "wolf")
-            {
-                //Sold update profits
-                //Remove item from list
-            }
-            if (activeSearchResult == "elephant")
-            {
-                //Sold update profits
-                //Remove item from list
-            }
+            string resultOfSale = shop.SellAnimal(activeSearchResult);
+            MessageBox.Show(resultOfSale);            
             searchBarTextBox.Clear();
         }
     }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PetStoreLibrary
 {
-    class Elephant : Animal
+    public class Elephant : Animal
     {
         public Elephant(bool hasTusks, int trunkLegth, string origin) : base(78000, "Elephant")
         {

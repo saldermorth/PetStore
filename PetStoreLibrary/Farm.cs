@@ -14,11 +14,9 @@ namespace PetStoreLibrary
         /// </summary>
         /// <param name="inventory"></param>
         public void BreedAnimals(List<Animal> inventory)
-        {
-            
+        {            
             for (int i = 0; i <45; i++)
             {
-
                 if (i < 13)
                 {
                     Wolf temp = new Wolf("Timber", "Grey", false);
@@ -29,7 +27,7 @@ namespace PetStoreLibrary
                     Duck temp = new Duck(true, false, "Quack");
                     inventory.Add(temp);
                 }
-                else// TOdo - never enters here
+                else
                 {
                     Elephant temp = new Elephant(true, 4000, "Africa");
                     inventory.Add(temp);

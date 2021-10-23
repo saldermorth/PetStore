@@ -9,11 +9,11 @@ namespace PetStoreLibrary.Animals
 {
     public class AnimalShop
     {
-        public static List<Animal> Inventory = new List<Animal>();
-        public static List<Animal> Sold = new List<Animal>();
-        public static decimal Profits { get; set; }
+        private static List<Animal> Inventory = new List<Animal>();
+        private static List<Animal> SoldItems = new List<Animal>();
+        private static decimal Profits { get; set; }
 
-        public static void Meny()
+        public void Meny()
         {
             Farm oldMcdonalds = new Farm();
             oldMcdonalds.BreedAnimals(Inventory);
@@ -42,7 +42,6 @@ namespace PetStoreLibrary.Animals
                 {
                     searchResults.Add(item);
                 }
-
             }
                        
             return searchResults;
@@ -52,8 +51,59 @@ namespace PetStoreLibrary.Animals
             List<Animal> searchResults = SearchResult(search);
 
             return searchResults;
+        }
+        public string SellAnimal(string activeSearchResult)//Todo - rerturn string
+        {
+            if (activeSearchResult == "duck")
+            {
+                foreach (Animal item in Inventory)
+                {
+                    if (item.Name.Contains("Duck"))
+                    {
+                        SoldItems.Add(item);
+                        Inventory.Remove(item);
+                        Profits += item.Price;
+                        return $"{item.Name} Sold. Cost : {item.Price}. \nTotal profits : {Profits}";                        
+                    }
+                }
+            }
+            if (activeSearchResult == "wolf")
+            {
+                foreach (Animal item in Inventory)
+                {
+                    if (item.Name.Contains("Wolf"))
+                    {
+                        SoldItems.Add(item);
+                        Inventory.Remove(item);
+                        Profits += item.Price;
+                        return $"{item.Name} Sold. Cost : {item.Price}. \nTotal profits : {Profits}";
+                    }
+                }
 
-
+            }
+            if (activeSearchResult == "elephant")
+            {
+                                
+                foreach (Elephant item in Inventory.OfType<Elephant>())
+                {
+                    if (item.Name.Contains("Elephant") && item.GetType() == typeof(Elephant))
+                    {                        
+                        SoldItems.Add(item);
+                        Inventory.Remove(item);
+                        Profits += item.Price;
+                        return $"{item.Name} Såld. \n" +
+                            $"Pris : {item.Price}.  \n"+
+                            $"Bruttovinst : {Profits}\n" +
+                            $"Artikelnummer :{item.ArtikelNummer}\n" +
+                            $"Har betar : {item.HasTusks.ToString()}\n" +
+                            $"Ursprung : {item.Origin}\n" +
+                            $"Snabellängd : {item.TrunkLegth}mm"
+                            ;
+                    }
+                }
+            }
+            //ToDo- if nothing bought return string
+            return "null";
         }
         
     }

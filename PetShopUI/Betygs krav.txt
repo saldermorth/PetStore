@@ -1,0 +1,57 @@
+﻿Sista tidpunkt för inlämning: 26 okt 2021 23:55, 3 dagar kvar
+Inlämningsuppgift 1 – Obligatoriskt -AnimalShop
+AnimalShop
+
+This week you will learn more about classes.
+For the following material, you should focus on what we talked about in the recorded session.
+
+Watch the following video.
+https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners/Working-with-Classes-and-Inheritances-in-the-NET-Framework-Class-Library-16
+
+Watch:
+https://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners/Understanding-Scope-and-Utilizing-Accessibility-Modifiers-18
+
+Read about classes here:
+https://en.wikibooks.org/wiki/C_Sharp_Programming/Classes
+Focus on the following headings: Methods, Constructors, Properties.
+
+Also read https://en.wikibooks.org/wiki/C_Sharp_Programming/Objects
+And read https://en.wikibooks.org/wiki/C_Sharp_Programming/Encapsulation - the chapters private, protected and public.
+
+Answer the following questions as a comment in your code.
+1. When should you use private instead of public?
+2. When is it useful to have multiple constructor functions?
+
+Your exercise for this week is to build a simple program with a class hierarchy. Imagine a pet shop, that sells different kinds of animals.
+
+Create a class named AnimalShop that represents the pet shop.//Done
+
+Features:
+
+- Create one class for each animal (at least three) that the shop can sell.// Done
+
+- Each animal class should have at least three properties.//Done
+
+- Also create a class Animal that contains whatever properties all animals have in common. For example, each animal needs a price. //Done 
+
+- Make sure that each specific animal class inherits from Animal.//Done
+
+
+- AnimalShop should have a method "public Animal SellAnimal(string animalType)" that returns an animal of the specified type.
+If there is no such animal, for example if the user asks for a "crocodile" but you don't have a class Crocodile, it should return null. //Done
+
+- When an animal is sold, the AnimalShop object should gain money.//Done
+
+- Store the money in a property./Done
+
+- Finally write a program that tests your classes (Menu).//Done
+
+  - It should create an object of the class AnimalShop.//Done
+
+  - Then buy some animals and print the values of all their properties.
+
+Betygskriterier:
+
+För G:
+
+Alla ovanstående features ska vara implementerade.
