@@ -20,33 +20,18 @@ namespace PetShopUI
         public PetStoreForm()
         {
             InitializeComponent();
-
-            //foreach (Animal pet in AnimalShop.Inventory)
-            //{
-            //    searchResultListBox.Items.Add(pet.Name);
-            //}
-            
-            
         }
             
         private void textBox1_MouseDown(object sender, MouseEventArgs e)
         {
             searchBarTextBox.Clear();
         }
-
-        private void PetStoreForm_Load(object sender, EventArgs e)
-        {
-
-        }
+             
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-
-
             SearchResultBoxUpdate();
-
-
-        }
+}
         public void SearchResultBoxUpdate()
         {
             //searchResults.Clear();

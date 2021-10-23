@@ -90,8 +90,7 @@ namespace PetShopUI
             this.Controls.Add(this.searchBarTextBox);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "PetStoreForm";
-            this.Text = "PetStore";
-            this.Load += new System.EventHandler(this.PetStoreForm_Load);
+            this.Text = "PetStore";            
             this.ResumeLayout(false);
             this.PerformLayout();
 

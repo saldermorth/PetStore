@@ -9,6 +9,9 @@ namespace PetStoreLibrary
 {
     public class Wolf : Animal
     {
+        public string Type { get; set; }
+        public string Color { get; set; }
+        public bool isAlfa { get; set; }
 
         public Wolf(string type, string color, bool isAlfa) : base(5000, "Wolf")
         {
@@ -16,10 +19,6 @@ namespace PetStoreLibrary
             Color = color;
             this.isAlfa = isAlfa;
         }
-
-        public string Type { get; set; }
-        public string Color { get; set; }
-        public bool isAlfa { get; set; }
         public string GetInfo()
         {
             return $"Har färgen : {this.Color}\n" +
